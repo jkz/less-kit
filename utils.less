@@ -1,0 +1,60 @@
+.hover-toggle {
+    .hover-off {
+        display: block;
+    }
+    .hover-on {
+        display: none;
+    }
+    &:hover {
+        .hover-off { display: none; }
+        .hover-on { display: block; }
+    }
+}
+
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.styleless-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.float-list(@side: left) {
+    .styleless-list;
+    li {
+        float: @side;
+    }
+    .clearfix;
+}
+
+.border-box {
+    .box-sizing(border-box);
+}
+
+/*
+ * Image replacement
+ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+    :before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+}

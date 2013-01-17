@@ -1,0 +1,32 @@
+// for opposite side references through @@
+@left:   right;
+@right:  left;
+@top:    bottom;
+@bottom: top;
+
+// Mixins
+///////////////////////////////////////////////////////////////////////////////
+.position(@side, @value) when (@side = left)   { left: @value; }
+.position(@side, @value) when (@side = right)  { right: @value; }
+.position(@side, @value) when (@side = top)    { top: @value; }
+.position(@side, @value) when (@side = bottom) { bottom: @value; }
+.padding(@side, @value)  when (@side = left)   { padding-left: @value; }
+.padding(@side, @value)  when (@side = right)  { padding-right: @value; }
+.padding(@side, @value)  when (@side = top)    { padding-top: @value; }
+.padding(@side, @value)  when (@side = bottom) { padding-bottom: @value; }
+.margin(@side, @value)   when (@side = left)   { margin-left: @value; }
+.margin(@side, @value)   when (@side = right)  { margin-right: @value; }
+.margin(@side, @value)   when (@side = top)    { margin-top: @value; }
+.margin(@side, @value)   when (@side = bottom) { margin-bottom: @value; }
+
+
+// Dimensions
+///////////////////////////////////////////////////////////////////////////////
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.size(@size) {
+    .size(@size, @size);
+}
