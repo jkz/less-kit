@@ -45,10 +45,12 @@
 /*
  * Image replacement
  */
-.ir {
-    background-color: transparent;
+.image-replace(@url) {
+    background-image: ~"url('@{url}')";
+    overflow: hidden;
     border: 0;
     overflow: hidden;
+    text-indent: 200%;
     /* IE 6/7 fallback */
     *text-indent: -9999px;
     :before {
@@ -58,3 +60,4 @@
         height: 100%;
     }
 }
+
