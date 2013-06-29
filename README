@@ -1,2 +1,10 @@
 A collection of less mixins to speed up stylesheet development and
 improve readability.
+
+For just the toolkit:
+
+    @import "less-kit/kit";
+
+For opinionated defaults:
+
+    @import "less-kit/more";
